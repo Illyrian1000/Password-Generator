@@ -6,3 +6,38 @@ const characters = ["A","B","C","D","E","F","G","H","I","J",
  "$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",
  ",","|",":",";","<",">",".","?",
 "/"];
+
+
+let firstPasswordElement = document.getElementById("firstPassword");
+let secondPasswordElement = document.getElementById("secondPassword");
+
+
+
+
+
+function generatePassword(){
+    let pass1 = randomPassword();
+    let pass2 = randomPassword();
+    firstPasswordElement.textContent = pass1; 
+    secondPasswordElement.textContent = pass2; 
+}
+
+// do gjeneroj nje password random
+
+function randomPassword(){
+    let passwordTest = "";
+
+    for( let i = 0; i < 15; i++){
+        passwordTest += characters[randomNumber()];
+    }
+
+    return passwordTest;
+
+}
+
+
+// do japi numer nga 0 deri te elementi i fundit te array characters
+
+function randomNumber(){
+    return Math.floor(Math.random() * characters.length);
+}
