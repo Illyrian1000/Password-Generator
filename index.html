@@ -15,16 +15,28 @@
     <div class="mainContainer">
 
         <h1>Generate a <br> <span>random password</span></h1>
-        <p>Never use an insecure password again.</p>
+
+        <p class="firstP">Never use an insecure password again.</p>
+
+        <div>
+                <p class="otherP">Password length: <input type="number" min="8" max="18" value="16" id="passwrodLength"></p>
+                <div class="passwordLengthContainer">
+                <p class="otherP">Numbers <input type="checkbox" id="numbersOption" checked></p>
+                <p class="otherP">Characters <input  type="checkbox" id="charactersOption" checked></p>
+        </div>
+
+    
         <button onclick="generatePassword()">Generate passwords</button>
 
+       
+
         <div class="outputContainer">
-            <div class="passwordOutput">
+            <div onclick="copy('firstPassword')" class="passwordOutput">
                 <p id="firstPassword"> </p>
             </div>
 
 
-            <div class="passwordOutput">
+            <div onclick="copy('secondPassword')" class="passwordOutput">
                 <p id="secondPassword" ></p>
             </div>
         </div>

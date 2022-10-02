@@ -12,9 +12,6 @@ let firstPasswordElement = document.getElementById("firstPassword");
 let secondPasswordElement = document.getElementById("secondPassword");
 
 
-
-
-
 function generatePassword(){
     let pass1 = randomPassword();
     let pass2 = randomPassword();
@@ -26,8 +23,9 @@ function generatePassword(){
 
 function randomPassword(){
     let passwordTest = "";
+    let passLenght = document.getElementById("passwrodLength").value;
 
-    for( let i = 0; i < 15; i++){
+    for( let i = 0; i < passLenght; i++){
         passwordTest += characters[randomNumber()];
     }
 
@@ -41,3 +39,8 @@ function randomPassword(){
 function randomNumber(){
     return Math.floor(Math.random() * characters.length);
 }
+
+function copy(idToCopy) {
+    var copyText = document.getElementById(idToCopy);
+    navigator.clipboard.writeText(copyText.innerHTML);
+  }
