@@ -11,6 +11,9 @@ const characters = ["A","B","C","D","E","F","G","H","I","J",
 let firstPasswordElement = document.getElementById("firstPassword");
 let secondPasswordElement = document.getElementById("secondPassword");
 
+var includeNumbers = document.getElementById("numbersOption");
+var includeCharacters = document.getElementById("charactersOption");
+
 
 function generatePassword(){
     let pass1 = randomPassword();
@@ -36,9 +39,32 @@ function randomPassword(){
 
 // do japi numer nga 0 deri te elementi i fundit te array characters
 
+// function randomNumber(){
+//     return Math.floor(Math.random() * characters.length);
+// }
+
+
+
+
 function randomNumber(){
-    return Math.floor(Math.random() * characters.length);
-}
+        let newRandomNumber = Math.floor(Math.random() * characters.length);
+
+        if( includeCharacters.checked === false && includeNumbers.checked === false){
+            return Math.floor(Math.random() * 51);
+        } else if ( includeCharacters.checked === false ){
+            return Math.floor(Math.random() * 61);
+        } else if ( includeNumbers.checked === false && newRandomNumber > 51 && newRandomNumber < 62){
+            return newRandomNumber + 10;
+        } else {
+            return newRandomNumber;
+        }
+
+    }
+
+
+
+
+// copy passwordin
 
 function copy(idToCopy) {
     var copyText = document.getElementById(idToCopy);
