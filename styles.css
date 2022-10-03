@@ -160,6 +160,7 @@ input{
 
     h1, .firstP {
         margin-left: 30px;
+        text-align: right;
     }
 
     .outputContainer{
@@ -173,3 +174,9 @@ input{
     .inputContainer{
         margin-top: 50px;
     }
+
+    button{ 
+    box-shadow: none;
+    }
+
+}
