@@ -145,3 +145,31 @@ input{
 #numbersOption{
     background-color: #0EA5E9;
 }
+
+@media screen and (max-width: 600px){
+    
+    body{
+        
+    background-color: #1F2937;
+    }
+    .mainContainer{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    h1, .firstP {
+        margin-left: 30px;
+    }
+
+    .outputContainer{
+        display: block;
+        margin-left: none;
+        border: none;
+        padding-bottom: 50px;
+        align-items: center;
+    }
+
+    .inputContainer{
+        margin-top: 50px;
+    }
